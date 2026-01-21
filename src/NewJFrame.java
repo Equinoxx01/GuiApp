@@ -15,11 +15,19 @@ public class NewJFrame extends javax.swing.JFrame {
      */
     public NewJFrame() {
         initComponents();
+        
+        Color transparent = new Color(255, 255, 255);
+        
+        
+        dashboard.setOpaque(true);
+        dashboard.setBackground(transparent);
     }
-    
-        Color navcolor = new Color (90,45,130);
-        Color headcolor = new Color (123,63,228);
+        
+        Color navcolor = new Color (240,240,240);
+        Color headcolor = new Color (255,204,204);
         Color bodycolor = new Color (243,238,255);
+        Color transparent = new Color (255, 255, 255, 0);
+//
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -32,13 +40,9 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         side = new javax.swing.JPanel();
-        home = new javax.swing.JPanel();
+        dashboard = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        fruits = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        fruits1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
         head = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         main = new javax.swing.JPanel();
@@ -49,82 +53,35 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        side.setBackground(new java.awt.Color(90, 45, 130));
+        side.setBackground(new java.awt.Color(255, 255, 255));
         side.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        home.setBackground(new java.awt.Color(90, 45, 130));
-        home.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                homeMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                homeMouseExited(evt);
-            }
-        });
-        home.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        dashboard.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("HOMEPAGE");
-        home.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 30));
-
-        side.add(home, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 260, 30));
-
-        fruits.setBackground(new java.awt.Color(90, 45, 130));
-        fruits.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel1.setText("DASHBOARD");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                fruitsMouseEntered(evt);
+                jLabel1MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                fruitsMouseExited(evt);
+                jLabel1MouseExited(evt);
             }
         });
-        fruits.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        dashboard.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 50));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("FRUITS / PRODUCTS");
-        fruits.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 30));
+        side.add(dashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 260, 50));
 
-        side.add(fruits, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 260, 30));
-
-        fruits1.setBackground(new java.awt.Color(90, 45, 130));
-        fruits1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                fruits1MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                fruits1MouseExited(evt);
-            }
-        });
-        fruits1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("FRUITS / PRODUCTS");
-        fruits1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 30));
-
-        side.add(fruits1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 260, 30));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 260, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
-
-        side.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 260, 30));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pic/logos.png"))); // NOI18N
+        side.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 460));
 
         jPanel1.add(side, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 460));
 
-        head.setBackground(new java.awt.Color(123, 63, 228));
+        head.setBackground(new java.awt.Color(255, 204, 204));
         head.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.setBackground(new java.awt.Color(123, 63, 228));
+        jTextField1.setBackground(new java.awt.Color(255, 204, 204));
         jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setText("FRUITBASKET SYSTEM");
@@ -157,7 +114,7 @@ public class NewJFrame extends javax.swing.JFrame {
         main.setLayout(mainLayout);
         mainLayout.setHorizontalGroup(
             mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         mainLayout.setVerticalGroup(
             mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,32 +139,16 @@ public class NewJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+        
+        
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void homeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseEntered
-       home.setBackground(bodycolor);
-    }//GEN-LAST:event_homeMouseEntered
+    private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
+        dashboard.setBackground(bodycolor);
+    }//GEN-LAST:event_jLabel1MouseEntered
 
-    private void homeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeMouseExited
-        home.setBackground(navcolor);
-    }//GEN-LAST:event_homeMouseExited
-
-    private void fruitsMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fruitsMouseEntered
-        fruits.setBackground(bodycolor);
-    }//GEN-LAST:event_fruitsMouseEntered
-
-    private void fruitsMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fruitsMouseExited
-        fruits.setBackground(navcolor);
-    }//GEN-LAST:event_fruitsMouseExited
-
-    private void fruits1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fruits1MouseEntered
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fruits1MouseEntered
-
-    private void fruits1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_fruits1MouseExited
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fruits1MouseExited
+    private void jLabel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseExited
+        dashboard.setBackground(transparent);    }//GEN-LAST:event_jLabel1MouseExited
 
     /**
      * @param args the command line arguments
@@ -245,16 +186,12 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel fruits;
-    private javax.swing.JPanel fruits1;
+    private javax.swing.JPanel dashboard;
     private javax.swing.JPanel head;
-    private javax.swing.JPanel home;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JPanel main;
     private javax.swing.JPanel side;
